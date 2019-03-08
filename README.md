@@ -90,7 +90,7 @@ function removerItens($arr, $vI) {
 ```
 
 #### Busca Binária:
-É uma forma eificiente de encontrar um item em uma lista ordenada de itens.
+É uma forma eficiente de encontrar um item em uma lista ordenada de itens.
 
 1. Um vetor qualquer, primeiro dizemos qual é o menor e qual é o maior índice do array:
 
