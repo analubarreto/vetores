@@ -10,32 +10,32 @@ class ListaDeContatos {
     }
 
     public function mostrarLista() {
-        foreach ($listaArr as $item) {
+        foreach ($this->lista as $item) {
             return $item . "<br/>";
         }
     }
 
-    public function adicionarItens($listaArr, $vI) {
-        $max = sizeof($listaArr) - 1;
+    public function adicionarItens($vI) {
+        $max = sizeof($this->lista) - 1;
     
         if ($n < $max) {
-            $i = $listaArr[$i]; 
+            $i = $this->lista[$i]; 
             while ($i > 0 && $max > $vI) {
-                $listaArr[$i] = $listaArr[$i - 1];  
+                $this->lista[$i] = $this->lista[$i - 1];  
                 $i -= 1;
             }
-            $listaArr[$i] = $vI;
+            $this->lista[$i] = $vI;
         } else {
             return "Overflow";
         }
     }
 
-    public function removerItens($listaArr, $vI) {
-        if ($i < $listaArr[$i]) {
-            $listaArr[$i] -= 1; //$n
+    public function removerItens($vI) {
+        if ($i < $this->lista[$i]) {
+            $this->lista[$i] -= 1; //$n
     
             while ($i < $vI) {
-                $listaArr[$i] = $listaArr[$i] + 1;
+                $this->lista[$i] = $this->lista[$i] + 1;
                 $i += 1;
             }
         } else {
@@ -44,9 +44,9 @@ class ListaDeContatos {
     
     }
 
-    public function procurarItens($listaArr, $p) {
+    public function procurarItens($p) {
         $limiteInf = 0;
-        $limiteSup = sizeof($listaArr) - 1;
+        $limiteSup = sizeof($this->lista) - 1;
     
         while ($limiteInf <= $limiteInf) {
             $meio = ($limiteInf + $limiteSup) / 2;
